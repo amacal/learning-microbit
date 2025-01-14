@@ -1,0 +1,30 @@
+{
+    "name": "micro:bit",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "runArgs": [
+        "--privileged"
+    ],
+    "mounts": [
+        "source=/media,target=/media,type=bind,bind-propagation=shared"
+    ],
+    "containerEnv": {
+        "HOST_USERNAME": "${localEnv:USER}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.makefile-tools",
+                "sunshaoce.risc-v",
+                "zixuanwang.linkerscript"
+            ],
+            "settings": {
+                "files.trimTrailingWhitespace": true,
+                "files.trimFinalNewlines": true,
+                "files.insertFinalNewline": true
+            }
+        }
+    }
+}
