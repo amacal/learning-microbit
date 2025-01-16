@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Format Assembly",
+            "type": "shell",
+            "command": "node",
+            "args": ["./.vscode/format.js", "${file}"],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "never",
+            },
+        }
+    ]
+}
